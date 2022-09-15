@@ -82,20 +82,65 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Tipo Usuario</h1>
+            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Usuario</h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_usu" method= "POST" autocomplete = "off">
                 <tr>
-                    <th colspan="2">CREAR TIPOS DE USUARIO</th>
+                    <th colspan="2">CREAR USUARIOS</th>
                 </tr>
                 <tr>
-                    <th> Identificador </th>                  
+                    <th> Documento Identificación de Usuario </th>                  
                     <th> <input type= "text" readonly></th>
                 </tr>
                 <tr>
                     <th> Tipo de Usuario </th>                  
-                    <th><input type= "text" name= "tipusu" placeholder = "Ingresar Tipo Usuario"></th>
+                    <th><input type= "number" name= "docu" placeholder = "Ingresar Documento de Identidad"></th>
+                </tr>
+                <tr>
+                    <th> Primer Nombre Usuario </th>                  
+                    <th><input type= "txt" name= "pnombre" placeholder = "Ingresar Primer Nombre"></th>
+                </tr>
+                <tr>
+                    <th> Segundo Nombre Usuario</th>                  
+                    <th><input type= "txt" name= "snombre" placeholder = "Ingresar Segundo Nombre"></th>
+                </tr>
+                <tr>
+                    <th> Primer Apellido Usuario</th>                  
+                    <th><input type= "txt" name= "pape" placeholder = "Ingresar Primer Apellido"></th>
+                </tr>
+                <tr>
+                    <th> Segundo Apellido Usuario</th>                  
+                    <th><input type= "txt" name= "sape" placeholder = "Ingresar Segundo Apellido"></th>
+                </tr>
+                <tr>
+                    <th> Dirección Usuario</th>                  
+                    <th><input type= "txt" name= "direccion" placeholder = "Ingresar Dirección"></th>
+                </tr>
+                <tr>
+                    <th> Teléfono Usuario</th>                  
+                    <th><input type= "number" name= "telefono" placeholder = "Ingresar Teléfono"></th>
+                </tr>
+                <tr>
+                    <th> Correo Electrónico Usuario</th>                  
+                    <th><input type= "email" name= "email" placeholder = "Ingresar Correo Electrónico"></th>
+                </tr>
+                <tr>
+                    <th> Tarjeta Profesional</th>                  
+                    <th><input type= "number" name= "tprof" placeholder = "Ingresar Número Tarjeta Profesional"></th>
+                </tr>
+                <tr>
+                    <th> Nickname Usuario</th>                  
+                    <th><input type= "number" name= "nick" placeholder = "Ingresar Nickname"></th>
+                </tr>
+                <tr>
+                    <th> Contraseña Usuario</th>                  
+                    <th><input type= "password" name= "passwd" placeholder = "Ingresar Correo Electrónico"></th>
+                </tr>
+                <tr>
+                    <th> Tipo Usuario</th>                                   
+                    <th>
+                    </th>
                 </tr>
                 <tr>
                     <th colspan="2">&nbsp;</th>
