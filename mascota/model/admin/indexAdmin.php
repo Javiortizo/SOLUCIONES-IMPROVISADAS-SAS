@@ -19,7 +19,7 @@ $usua = mysqli_fetch_assoc($usuarios);
     
     
         <input type="submit" value="Cerrar sesión" name="btncerrar" /></td>
-        <input type="submit" formaction="../index.php" value="Regresar" />
+<!--<input type="submit" formaction="./indexAdmin.php" value="Regresar" /> "Se elimina botón porque no cumplia alguna acción lógica"-->
     </tr>
 </form>
 
@@ -63,7 +63,7 @@ if(isset($_POST['btncerrar']))
                 <li class="first-item">
                     <a href="agregar-tipoUsuario.php">
                         <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">AGREGAR TIPOS DE USUARIO</span>
+                        <span class="text-item">AGREGAR TIPO DE USUARIO</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
@@ -71,7 +71,7 @@ if(isset($_POST['btncerrar']))
                 <li>
                     <a href="agregar-estado.php">
                         <img src="img/ejecucion.png" alt="" class="imagen">
-                        <span class="text-item">AGREGAR ESTADOS</span>
+                        <span class="text-item">AGREGAR ESTADO</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
@@ -79,15 +79,15 @@ if(isset($_POST['btncerrar']))
                 <li>
                     <a href="agregar-usuario.php">
                         <img src="img/implementar.jpg" alt="" class="imagen">
-                        <span class="text-item">AGREGAR USUARIOS</span>
+                        <span class="text-item">AGREGAR USUARIO</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
+                    <a href="agregar-tipoMascota.php">
                         <img src="img/planear.png" alt="" class="imagen">
-                        <span class="text-item">CONSULTAR/MODIFICAR VISITAS</span>
+                        <span class="text-item">AGREGAR TIPO MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
@@ -95,15 +95,15 @@ if(isset($_POST['btncerrar']))
                 <li>
                     <a href="#">
                         <img src="" alt="" class="imagen">
-                        <span class="text-item">CONSULTAR/MODIFICAR RECETAS</span>
+                        <span class="text-item">AGREGAR MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li class="first-item">
-                    <a href="#">
+                    <a href="agregar-afiliacion.php">
                         <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">AGREGAR ESTADOS</span>
+                        <span class="text-item">AGREGAR AFILIACIÓN</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
@@ -111,7 +111,15 @@ if(isset($_POST['btncerrar']))
                 <li>
                     <a href="#">
                         <img src="" alt="" class="imagen">
-                        <span class="text-item">CONSULTAR/MODIFICAR MEDICAMENTOS</span>
+                        <span class="text-item">AGREGAR VISITA</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="agregar-medicamentos.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">AGREGAR MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
@@ -119,15 +127,7 @@ if(isset($_POST['btncerrar']))
                 <li>
                     <a href="#">
                         <img src="" alt="" class="imagen">
-                        <span class="text-item">CONSULTAR/MODIFICAR TIPO MASCOTA</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">ACTIVAR/DESACTIVAR USUARIO</span>
+                        <span class="text-item">AGREGAR RECIBO DE MEDICINAS</span>
                         <span class="down-item"></span>
                     </a>
                 </li>

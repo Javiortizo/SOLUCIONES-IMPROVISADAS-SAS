@@ -13,7 +13,7 @@ $usua = mysqli_fetch_assoc($usuarios);
 if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_estado"))
 {
     $estado = $_POST['nomEstado'];
-    $sql_estado = "SELECT * from tipousuario where USER_TUSU =  '$tip_usu'";
+    $sql_estado = "SELECT * from ESTADOS where NOM_EST =  '$estado'";
     $con_estado = mysqli_query($mysqli, $sql_estado);
     $row = mysqli_fetch_assoc($con_estado);
     if ($row){
@@ -21,17 +21,17 @@ if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_estado"))
         echo '<script>window.location = "agregar-estado.php"</script>';
     }
 
-    elseif ($_POST["tipusu"] == ""){
+    elseif ($_POST["nomEstado"] == ""){
         echo '<script>alert ("Campos Vacios ");</script>';
-        echo '<script>window.location = "agregar-usu.php"</script>';
+        echo '<script>window.location = "agregar-estado.php"</script>';
     }
 
     else{
-        $tipo = $_POST["tipusu"];
-        $sql_usu = "INSERT INTO tipousuario (USER_TUSU) values('$tipo') ";
-        $tip = mysqli_query($mysqli, $sql_usu);
+        $tipoEstado = $_POST["nomEstado"];
+        $sql_est = "INSERT INTO ESTADOS (NOM_EST) values('$tipoEstado') ";
+        $tip = mysqli_query($mysqli, $sql_est);
         echo '<script>alert ("Registro Existoso ");</script>';
-        echo '<script>window.location = "agregar-usu.php"</script>';
+        echo '<script>window.location = "agregar-estado.php"</script>';
 
     }
 }
@@ -48,7 +48,7 @@ if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_estado"))
     
     
         <input type="submit" value="Cerrar sesión" name="btncerrar" /></td>
-        <input type="submit" formaction="../index.php" value="Regresar" />
+        <input type="submit" formaction="./indexAdmin.php" value="Regresar" />
     </tr>
 </form>
 
@@ -82,7 +82,7 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Tipo Usuario</h1>
+            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Tipo Estado</h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_estado" method= "POST" autocomplete = "off">

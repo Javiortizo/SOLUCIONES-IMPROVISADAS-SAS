@@ -4,34 +4,34 @@ session_start();
 require_once("../../db/connection.php");
 include("../../controller/validarSesion.php");
 $sql = "SELECT * FROM usuario, tipousuario WHERE alias_usu = '".$_SESSION['usuario']."' AND usuario.id_tusu = tipousuario.id_tusu";
-$tipoUsuarios = mysqli_query($mysqli, $sql);
-$usua = mysqli_fetch_assoc($tipoUsuarios);
+$usuarios = mysqli_query($mysqli, $sql);
+$usua = mysqli_fetch_assoc($usuarios);
 
 
 ?>
 <?php
-if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_tipUsu"))
+if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_medicamento"))
 {
-    $tip_usu = $_POST['tipUsu'];
-    $sql_usu = "SELECT * from tipousuario where USER_TUSU =  '$tip_usu'";
-    $tip = mysqli_query($mysqli, $sql_usu);
-    $row = mysqli_fetch_assoc($tip);
+    $medicamento = $_POST['NOMMED_MED'];
+    $sql_medicamento = "SELECT * from MEDICAMENTOS where NOMMED_MED =  '$medicamento'";
+    $con_medicamento = mysqli_query($mysqli, $sql_medicamento);
+    $row = mysqli_fetch_assoc($con_medicamento);
     if ($row){
-        echo '<script>alert ("El usuario ya existe !!! Cambielo ");</script>';
-        echo '<script>window.location = "agregar-tipoUsuario.php"</script>';
+        echo '<script>alert ("El medicamento ya existe !!! Cambielo ");</script>';
+        echo '<script>window.location = "agregar-medicamentos.php"</script>';
     }
 
-    elseif ($_POST["tipUsu"] == ""){
+    elseif ($_POST["NOMMED_MED"] == ""){
         echo '<script>alert ("Campos Vacios ");</script>';
-        echo '<script>window.location = "agregar-tipoUsuario.php"</script>';
+        echo '<script>window.location = "agregar-medicamentos.php"</script>';
     }
 
     else{
-        $tipo = $_POST["tipUsu"];
-        $sql_usu = "INSERT INTO tipousuario (USER_TUSU) values('$tipo') ";
-        $tip = mysqli_query($mysqli, $sql_usu);
+        $med = $_POST["NOMMED_MED"];
+        $sql_med = "INSERT INTO MEDICAMENTOS (NOMMED_MED) values('$med') ";
+        $m = mysqli_query($mysqli, $sql_med);
         echo '<script>alert ("Registro Existoso ");</script>';
-        echo '<script>window.location = "agregar-tipoUsuario.php"</script>';
+        echo '<script>window.location = "agregar-medicamentos.php"</script>';
 
     }
 }
@@ -82,27 +82,27 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Tipo Usuario</h1>
+            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Medicamento</h1>
         </section>
         <table border="1" class="Center">
-            <form name= "frm_tipUsu" method= "POST" autocomplete = "off">
+            <form name= "frm_medicamento" method= "POST" autocomplete = "off">
                 <tr>
-                    <th colspan="2">CREAR TIPOS DE USUARIOS</th>
+                    <th colspan="2">CREAR MEDICAMENTO</th>
                 </tr>
                 <tr>
-                    <th> Identificador </th>                  
+                    <th> ID Medicamento </th>                  
                     <th> <input type= "text" readonly></th>
                 </tr>
                 <tr>
-                    <th> Tipo de Usuario </th>                  
-                    <th><input type= "text" name= "tipUsu" placeholder = "Ingresar Tipo Usuario"></th>
+                    <th> Medicamento </th>                  
+                    <th><input type= "text" name= "NOMMED_MED" placeholder = "Ingresar Medicamento"></th>
                 </tr>
                 <tr>
                     <th colspan="2">&nbsp;</th>
                 </tr>
                 <tr>
                     <th colspan="2"><input type= "submit" value = "Guargar" name= "btn-guardar"></th>
-                    <input type= "hidden" name="guardar" value="frm_tipUsu">
+                    <input type= "hidden" name="guardar" value="frm_medicamento">
             </form>
         </table>
     </body>
