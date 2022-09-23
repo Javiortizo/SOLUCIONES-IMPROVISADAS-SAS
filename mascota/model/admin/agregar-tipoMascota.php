@@ -83,11 +83,11 @@ if(isset($_POST['btncerrar']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>taller</title>
+    <title>Agregar Tipo Mascota</title>
 </head>
     <body>
         <section class="title">
-            <h1>FORMULARIO AGREGAR TIPO DE MASCOTA DESDE <?php echo $usua['USER_TUSU']?></h1>
+            <h1>Formulario Agregar Tipo de Mascota Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
     <table border="1" class="center">
         <form name="frm_tmas" method="POST" autocomplete="off">

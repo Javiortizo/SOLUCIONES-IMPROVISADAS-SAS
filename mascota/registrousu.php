@@ -30,8 +30,11 @@
         $correo=    $_POST['mail'];
         $usuario=   $_POST['user'];
         $clave=     $_POST['pass'];
-        $idusu=     $_POST['idusu'];
-        $idest=    $_POST['estusu'];
+        // $idusu=     $_POST['idusu'];
+        // $idest=    $_POST['estusu'];
+        //
+        $idusu=     3;
+        $idest=    2;
 
         $validar ="SELECT * FROM usuario WHERE IDENT_USU='$cedula' and ID_TUSU='$idusu'";
         $queryi=mysqli_query($mysqli,$validar);
@@ -91,7 +94,7 @@
             <input type="password" name="pass" placeholder="Ingrese Contraseña" >
             
             <!--select tipo usuario-->
-            <select name="idusu">
+            <!-- <select name="idusu">
                 <option value="">Seleccione tipo usuario...</option>
                
                
@@ -105,10 +108,10 @@
                    }while($fila=mysqli_fetch_assoc($query));
                
                ?>
-            </select>
+            </select> -->
 
             <!--select estado usuario-->
-            <select name="estusu">
+            <!-- <select name="estusu">
                 <option value="">Seleccione estado...</option>
                
                
@@ -122,7 +125,7 @@
                    }while($col=mysqli_fetch_assoc($query2));
                
                ?>
-            </select>
+            </select> -->
 
             <label for="usuario">&nbsp;</label>
             <input type="submit" name="validar" value="Registrarme">

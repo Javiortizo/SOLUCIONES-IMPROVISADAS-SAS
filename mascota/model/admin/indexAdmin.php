@@ -60,22 +60,22 @@ if(isset($_POST['btncerrar']))
            
             <ul class="menu wrapper" >
     
-                <li class="first-item">
-                    <a href="agregar-tipoUsuario.php">
-                        <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">AGREGAR TIPO DE USUARIO</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
+                <li class="first-item"> 
                     <a href="agregar-estado.php">
                         <img src="img/ejecucion.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR ESTADO</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
+
+                <li>
+                    <a href="agregar-tipoUsuario.php">
+                        <img src="img/analisis.png" alt="" class="imagen">
+                        <span class="text-item">AGREGAR TIPO DE USUARIO</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="agregar-usuario.php">
                         <img src="img/implementar.jpg" alt="" class="imagen">
@@ -83,39 +83,87 @@ if(isset($_POST['btncerrar']))
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
+
+                <li class="first-item">
+                    <a href="lista-estado.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR ESTADO</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>    
+
                 <li>
+                    <a href="lista-tipousuario.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR TIPO USUARIO</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>               
+
+                <li>
+                    <a href="lista-usuario.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR USUARIO</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>
+
+                <li class="first-item">
                     <a href="agregar-tipoMascota.php">
                         <img src="img/planear.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR TIPO MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
-                </li>
-    
+                </li>  
+                
                 <li>
-                    <a href="#">
+                    <a href="agregar-mascota.php">
                         <img src="" alt="" class="imagen">
                         <span class="text-item">AGREGAR MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
-                <li class="first-item">
+
+                <li>
                     <a href="agregar-afiliacion.php">
                         <img src="img/analisis.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR AFILIACIÓN</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
+
+                <li class="first-item">
+                    <a href="lista-tipomascota.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR TIPO MASCOTA</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>               
+
                 <li>
-                    <a href="#">
+                    <a href="lista-mascota.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR MASCOTA</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>               
+
+                <li>
+                    <a href="lista-afiliacion.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR AFILIACIÓN</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>
+                
+                <li class="first-item">
+                    <a href="agregar-visita.php">
                         <img src="" alt="" class="imagen">
                         <span class="text-item">AGREGAR VISITA</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
+
                 <li>
                     <a href="agregar-medicamentos.php">
                         <img src="" alt="" class="imagen">
@@ -123,31 +171,39 @@ if(isset($_POST['btncerrar']))
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
+
                 <li>
-                    <a href="#">
+                    <a href="agregar-remedicamentos.php">
                         <img src="" alt="" class="imagen">
-                        <span class="text-item">AGREGAR RECIBO DE MEDICINAS</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 10</span>
+                        <span class="text-item">AGREGAR RECIBO DE MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
+                <li class="first-item">
+                    <a href="lista-visita.php">
                         <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 11</span>
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR VISITA</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>                
+
+                <li>
+                    <a href="lista-medicamentos.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR MEDICAMENTOS</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>               
+
+                <li>
+                    <a href="lista-recibosmed.php">
+                        <img src="" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR RECIBO DE MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-                
+
             </ul>
             
         </nav>

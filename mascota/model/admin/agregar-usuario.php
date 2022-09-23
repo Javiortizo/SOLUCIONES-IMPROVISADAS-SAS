@@ -27,7 +27,7 @@ if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_usu"))
 
     }
 
-    elseif ($_POST["docu"] == "" || $_POST["pnombre"] == "" || $_POST["snombre"] == "" || $_POST["pape"] == "" || $_POST["sape"] == "" || $_POST["direccion"] == "" || $_POST["telefono"] == "" || $_POST["email"] == "" || $_POST["tprof"] == "" || $_POST["passwd"] == "" || $_POST["nick"] == "" || $_POST["tipoUsu"] == "" || $_POST["estado"] == "")
+    elseif ($_POST["docu"] == "" || $_POST["pnombre"] == "" || $_POST["pape"] == "" || $_POST["direccion"] == "" || $_POST["telefono"] == "" || $_POST["email"] == "" || $_POST["passwd"] == "" || $_POST["nick"] == "" || $_POST["tipoUsu"] == "" || $_POST["estado"] == "")
     {
         echo '<script>alert ("Existen Espacios Vacios ");</script>';
         echo '<script>window.location = "agregar-usuario.php"</script>';
@@ -111,11 +111,11 @@ if(isset($_POST['btncerrar']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>taller</title>
+    <title>Agregar Usuario</title>
 </head>
     <body>
         <section class="title">
-            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Usuario</h1>
+            <h1> Formulario Agregar Usuario Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_usu" method= "POST" autocomplete = "off">
@@ -202,7 +202,7 @@ if(isset($_POST['btncerrar']))
                     <th colspan="2">&nbsp;</th>
                 </tr>
                 <tr>
-                    <th colspan="2"><input type= "submit" value = "Guargar" name= "btn-guardar"></th>
+                    <th colspan="2"><input type= "submit" value = "Guardar" name= "btn-guardar"></th>
                     <input type= "hidden" name="guardar" value="frm_usu">
             </form>
         </table>

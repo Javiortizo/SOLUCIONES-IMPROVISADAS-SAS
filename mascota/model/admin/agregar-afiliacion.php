@@ -89,11 +89,11 @@ if(isset($_POST['btncerrar']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Javier</title>
+    <title>Agregar Afiliación</title>
 </head>
     <body>
         <section class="title">
-            <h1><?php echo $usua['USER_TUSU']?> Formulario Agregar Tipo Estado</h1>
+            <h1> Formulario Agregar Afiliación Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_afiliacion" method= "POST" autocomplete = "off">
@@ -128,7 +128,7 @@ if(isset($_POST['btncerrar']))
                     <th colspan="2">&nbsp;</th>
                 </tr>
                 <tr>
-                    <th colspan="2"><input type= "submit" value = "Guargar" name= "btn-guardar"></th>
+                    <th colspan="2"><input type= "submit" value = "Guardar" name= "btn-guardar"></th>
                     <input type= "hidden" name="guardar" value="frm_afiliacion">
             </form>
         </table>
