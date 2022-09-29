@@ -71,58 +71,58 @@ function centrar() {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Actualizar/Eliminar Visita</title>
 </head>
 <body onload="centrar();">
     <table border="1" class="Center">
             <form name= "frm_consultaUsuario" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>Id Visita</td>
+                    <th>Id Visita</th>
                     <td><input readonly name="idVis" type="text" value="<?php echo $result ['ID_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Fecha de Visita Mascota</td>
+                    <th>Fecha Visita Mascota</th>
                     <td><input name="fechVis" type="date" value="<?php echo $result ['FECHA_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Hora Visita Mascota</td>
+                    <th>Hora Visita Mascota</th>
                     <td><input name="horaVis" type="text" value="<?php echo $result ['HORA_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Temperatura Mascota °C</td>
+                    <th>Temperatura Mascota °C</th>
                     <td><input name="tempVis" type="text" value="<?php echo $result ['TEMP_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Peso Mascota Kg</td>
+                    <th>Peso Mascota Kg</th>
                     <td><input name="pesoVis" type="text" value="<?php echo $result ['PESO_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Frecuencia Cardiaca Mascota ppm</td>
+                    <th>Frecuencia Cardiaca Mascota ppm</th>
                     <td><input name="freCarVis" type="text" value="<?php echo $result ['FRCAR_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Frecuencia Respiratoria Mascota rpm</td>
+                    <th>Frecuencia Respiratoria Mascota rpm</th>
                     <td><input name="freResVis" type="text" value="<?php echo $result ['FRRES_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Estado de Ánimo Mascota</td>
+                    <th>Estado de Ánimo Mascota</th>
                     <td><input name="estVis" type="text" value="<?php echo $result ['ANIMO_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Recomendaciones Visita Mascota</td>
+                    <th>Recomendaciones Visita Mascota</th>
                     <td><input name="recomVis" type="text" value="<?php echo $result ['RECOM_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Costo Visita Mascota</td>
+                    <th>Costo Visita Mascota</th>
                     <td><input name="costVis" type="text" value="<?php echo $result ['COSTO_VIS'] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Diagnóstico Visita Mascota</td>
+                    <th>Diagnóstico Visita Mascota</th>
                     <td><input name="diagVis" type="text" value="<?php echo $result ['DIAG_VIS'] ?>"></td>
                 </tr>
                 <tr>
                     <th> Mascota - Dueño</th>                                   
-                    <th>
+                    <td>
                         <select name="idMascota">
                                 <option value= "<?php echo $result ['ID_MAS'] ?>"><?php echo $result ['NOM_MAS'] ?></option>
                                 <?php
@@ -134,11 +134,11 @@ function centrar() {
                                 <?php } while($fila_mascota=mysqli_fetch_assoc($query_mascota));
                                 ?>
                         </select>
-                    </th>
+                    </td>
                 </tr>
                 <tr>
-                    <th> ID Veterinario</th>                                   
-                    <th>
+                    <th> Veterinario</th>                                   
+                    <td>
                         <select name="idVeterinario">
                                 <option value= "<?php echo $result ['ID_USU'] ?>"><?php echo ($result['PNOMBRE_USU']. " ". $result['APELLIDOP_USU']. " - CC". $result['IDENT_USU']) ?></option>
                                 <?php
@@ -150,11 +150,11 @@ function centrar() {
                                 <?php } while($fila_vet= mysqli_fetch_assoc($query_vet));
                                 ?>
                         </select>
-                    </th>
+                    </td>
                 </tr>
                 <tr>
-                    <th> Tipo Estado</th>                                   
-                    <th>
+                    <th>Estado Mascota</th>                                   
+                    <td>
                         <select name="estado">
                                 <option value= "<?php echo $result ['ID_EST'] ?>"><?php echo $result ['NOM_EST'] ?></option>
                                 <?php
@@ -166,7 +166,7 @@ function centrar() {
                                 <?php } while($fila_estados=mysqli_fetch_assoc($query_estados));
                                 ?>
                         </select>
-                    </th>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="2">&nbsp;</td>

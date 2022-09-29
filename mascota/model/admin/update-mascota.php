@@ -55,7 +55,7 @@ $fila_estados= mysqli_fetch_assoc($query_estados);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act.User</title>
+    <title>Actualizar/Eliminar Mascota</title>
 </head>
 <script> 
     function centrar() { 
@@ -68,25 +68,25 @@ $fila_estados= mysqli_fetch_assoc($query_estados);
     <table border="1" class="Center">
         <form name= "frm_consulta" method= "POST" autocomplete = "off">
             <tr>
-                <td>Identificador Mascota</td>
+                <th>Id Mascota</th>
                 <td><input readonly name="idmas" type="text" value="<?php echo $resul['ID_MAS'] ?>"></td>
             </tr>
 
             <tr>
-                <td>Nombre Mascota</td>
+                <th>Nombre Mascota</th>
                 <td><input name="nom" type="text" value="<?php echo $resul['NOM_MAS'] ?>"></td>
             </tr>
             <tr>
-                <td>Color Mascota</td>
+                <th>Color Mascota</th>
                 <td><input name="color" type="text" value="<?php echo $resul['COLOR_MAS'] ?>"></td>
             </tr>
             <tr>
-                <td>Raza Mascota</td>
+                <th>Raza Mascota</th>
                 <td><input name="raza" type="text" value="<?php echo $resul['RAZA_MAS'] ?>"></td>
             </tr>
 
             <tr>
-                <td>Afiliacion Mascota</td>
+                <th>Afiliación Mascota</th>
                 <td>
                     <select name="afilmas">
                         <option value="<?php echo $resul['AFIL_MAS'] ?>"><?php echo $resul['AFIL_MAS'] ?></option>
@@ -96,7 +96,7 @@ $fila_estados= mysqli_fetch_assoc($query_estados);
                 </td>
             </tr> 
             <tr>
-                <td>Dueño de Mascota</td>
+                <th>Dueño Mascota</th>
                 <td><select name="estado">
                         <option value= "<?php echo $resul['ID_USU'] ?>"><?php echo $resul['ALIAS_USU'] ?></option>
                             <?php
@@ -112,7 +112,7 @@ $fila_estados= mysqli_fetch_assoc($query_estados);
             </tr>
 
             <tr>
-                <td>Tipo de Mascota</td>
+                <th>Tipo Mascota</th>
                 <td>
                     <select name="tipousu">
                         <option value= "<?php echo $resul['ID_TMAS'] ?>"><?php echo $resul['TIPO_TMAS'] ?></option>

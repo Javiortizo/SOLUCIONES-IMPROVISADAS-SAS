@@ -37,7 +37,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act.User</title>
+    <title>Actualizar/Eliminar Tipo Mascota</title>
 </head>
 <script> 
     function centrar() { 
@@ -50,12 +50,12 @@
     <table border="1" class="Center">
         <form name= "frm_consulta" method= "POST" autocomplete = "off">
             <tr>
-                <td>Identificador Tipo Mascota</td>
+                <th>Id Tipo Mascota</th>
                 <td><input readonly name="idmas" type="text" value="<?php echo $resul['ID_TMAS'] ?>"></td>
             </tr>
 
             <tr>
-                <td>Tipo de Mascota</td>
+                <th>Tipo Mascota</th>
                 <td><input name="nom" type="text" value="<?php echo $resul['TIPO_TMAS'] ?>"></td>
             </tr>
 

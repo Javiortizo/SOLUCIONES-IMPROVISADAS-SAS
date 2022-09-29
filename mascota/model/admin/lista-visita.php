@@ -50,32 +50,33 @@ if(isset($_POST['btncerrar']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
     <link rel="stylesheet" href="estilos.css">
-    <title>CONSULTAR/ACTUALIZAR/ELIMINAR USUARIO</title>
+    <title>Consulta Visita</title>
 </head>
     <body>
         <section class="title">
-            <h1> Formulario Consulta Vista Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Consulta Visitas Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_consultaVisita" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>&nbsp</td>
-                    <td>ID Visita</td>                     
-                    <td>Fecha de Visita Mascota</td>
-                    <td>Hora Visita Mascota</td>  
-                    <td>Temperatura Mascota °C</td>    
-                    <td>Peso Mascota Kg</td> 
-                    <td>Frecuencia Cardiaca Mascota ppm</td>
-                    <td>Frecuencia Respiratoria Mascota rpm</td>
-                    <td>Estado de Ánimo Mascota</td>
-                    <td>Recomendaciones Visita Mascota</td>
-                    <td>Costo Visita Mascota</td>
-                    <td>Diagnóstico Visita Mascota</td>
-                    <td>Mascota</td>
-                    <td>Veterinario</td>
-                    <td>Estado de la Mascota</td>
-                    <td>Accion</td>
+                    <th>&nbsp</th>
+                    <th>ID Visita</th>                     
+                    <th>Fecha de Visita Mascota</th>
+                    <th>Hora Visita Mascota</th>  
+                    <th>Temperatura Mascota °C</th>    
+                    <th>Peso Mascota Kg</td> 
+                    <th>Frecuencia Cardiaca Mascota ppm</th>
+                    <th>Frecuencia Respiratoria Mascota rpm</th>
+                    <th>Estado de Ánimo Mascota</th>
+                    <th>Recomendaciones Visita Mascota</th>
+                    <th>Costo Visita Mascota</th>
+                    <th>Diagnóstico Visita Mascota</th>
+                    <th>Nombre Mascota</th>
+                    <th>Veterinario</th>
+                    <th>Estado Mascota</th>
+                    <th>Acción</th>
 
                     
                 </tr>
@@ -87,7 +88,7 @@ if(isset($_POST['btncerrar']))
                         $i++;
                 ?>  
                 <tr>   
-                    <td><?php echo $i ?></td>
+                    <th><?php echo $i ?></th>
                     <td><input name="idVis" type="text" value= "<?php echo $resul ['ID_VIS'] ?>"> </td>    
                     <td><input name="fechVis" type="text" value= "<?php echo $resul['FECHA_VIS'] ?>"> </td>    
                     <td><input name="horaVis" type="text" value= "<?php echo $resul['HORA_VIS'] ?>"> </td>    

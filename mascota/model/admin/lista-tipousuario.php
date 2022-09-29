@@ -47,20 +47,21 @@ if(isset($_POST['btncerrar']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
     <link rel="stylesheet" href="estilos.css">
-    <title>Tipo Usuario</title>
+    <title>Consulta Tipos Usuario</title>
 </head>
     <body>
         <section class="title">
-            <h1> CONSULTAR TIPOS DE USUARIO Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Consulta Tipos Usuario Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_consulta" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>ID Tipo Usuario</td>
-                    <td>Tipo Usuario</td>
-                    <td>Accion</td>
+                    <th>&nbsp;</th>
+                    <th>Id Tipo Usuario</th>
+                    <th>Tipo Usuario</th>
+                    <th>Acción</th>
                 </tr>
                 <?php
                     $sql_consulta = "SELECT * FROM tipousuario";
@@ -70,7 +71,7 @@ if(isset($_POST['btncerrar']))
                         $i++;
                 ?>
                 <tr>
-                    <td><?php echo $i ?></td>
+                    <th><?php echo $i ?></th>
                     <td><input name="doc" type="text" value="<?php echo $resul['ID_TUSU'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['USER_TUSU'] ?>"></td>
                     <td><a href="?id=<?php echo $resul['ID_TUSU'] ?>" class="boton" onclick="window.open('update-tipousuario.php?id=<?php echo $resul['ID_TUSU'] ?>','','width= 600,height=500, toolbar=NO');void(null);">Update/Delete</a></td>

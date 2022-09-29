@@ -46,7 +46,7 @@ $fila_mascota= mysqli_fetch_assoc($query_mascota);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act.Afil</title>
+    <title>Actualizar/Eliminar Afiliación</title>
 </head>
 <script> 
     function centrar() { 
@@ -59,12 +59,12 @@ $fila_mascota= mysqli_fetch_assoc($query_mascota);
     <table border="1" class="Center">
         <form name= "frm_consulta" method= "POST" autocomplete = "off">
             <tr>
-                <td>Identificador Afiliacion</td>
+                <th>Id Afiliación</th>
                 <td><input readonly name="idafil" type="text" value="<?php echo $resul['ID_AFIL'] ?>"></td>
             </tr>
 
             <tr>
-                    <td> Mascota - Dueño</td>                                   
+                    <th> Mascota - Dueño</th>                                   
                     <td>
                         <select name="idmas">
                                 <option value= "">Seleccione La Mascota</option>
@@ -81,7 +81,7 @@ $fila_mascota= mysqli_fetch_assoc($query_mascota);
             </tr>
 
             <tr>
-                <td>Fecha Afiliacion</td>
+                <th>Fecha Afiliación</th>
                 <td><input name="date" type="date" value="<?php echo $resul['FCHINI_AFIL'] ?>"></td>
             </tr>
 

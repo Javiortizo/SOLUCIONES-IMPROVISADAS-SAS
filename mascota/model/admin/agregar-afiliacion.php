@@ -93,7 +93,7 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1> Formulario Agregar Afiliación Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Agregar Afiliación Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_afiliacion" method= "POST" autocomplete = "off">
@@ -101,11 +101,11 @@ if(isset($_POST['btncerrar']))
                     <th colspan="2">CREAR AFILIACIÓN</th>
                 </tr>
                 <tr>
-                    <th> ID Afiliación </th>                  
+                    <th> Id Afiliación </th>                  
                     <th> <input type= "text" readonly></th>
                 </tr>
                 <tr>
-                    <th> Fecha de Afiliación Mascota </th>                  
+                    <th> Fecha Afiliación Mascota </th>                  
                     <th><input type= "date" name= "fechaAfiliacion" placeholder = "Ingrese Fecha de Afiliación de la Mascota"></th>
                 </tr>
                 <tr>

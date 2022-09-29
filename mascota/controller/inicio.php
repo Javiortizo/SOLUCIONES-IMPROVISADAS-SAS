@@ -8,7 +8,7 @@ if($_POST["inicio"]){
 	
 	
 	/// consultamos el usuario segun el usuario y la clave
-	$con="select * from usuario where ALIAS_USU = '$usuario' and PASSWD_USU = '$clave'"; 	
+	$con="select * from usuario where ALIAS_USU = '$usuario' and PASSWD_USU = '$clave' AND ID_EST = 1"; 	
 	$query=mysqli_query($mysqli, $con);
 	$fila=mysqli_fetch_assoc($query);
 	
@@ -37,6 +37,11 @@ if($_POST["inicio"]){
 			exit();		
 		}
 		
+		/// si es una Prueba Admin
+		elseif($_SESSION['tipo'] == 10){
+			header("Location: ../model/pruebaadmin/indexAdmin.php"); 
+			exit();		
+		}		
 		
 	}else{
 		/// si el usuario y la clave son incorrectas lo lleva a la pagina de inio y se muestra un mensaje

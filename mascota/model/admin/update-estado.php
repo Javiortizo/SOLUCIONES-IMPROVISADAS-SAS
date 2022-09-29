@@ -47,16 +47,16 @@
     }     
 </script>
 <body onload="centrar();">
-    <h1>Agregar/Eliminar Estados</h1>
+    <h1>Actualizar/Eliminar Estado</h1>
     <table border="1" class="Center">
         <form name= "frm_consulta" method= "POST" autocomplete = "off">
             <tr>
-                <td>Identificador Estado</td>
+                <th>Id Estado</th>
                 <td><input readonly name="idmas" type="text" value="<?php echo $resul['ID_EST'] ?>"></td>
             </tr>
 
             <tr>
-                <td>Nombre Estado</td>
+                <th>Estado</th>
                 <td><input name="nom" type="text" value="<?php echo $resul['NOM_EST'] ?>"></td>
             </tr>
 

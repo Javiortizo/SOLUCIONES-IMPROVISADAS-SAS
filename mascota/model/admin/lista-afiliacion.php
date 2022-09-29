@@ -8,20 +8,6 @@ $usuarios = mysqli_query($mysqli, $sql);
 $usua = mysqli_fetch_assoc($usuarios);
 ?>
 
-<?php
-// Realizamos la consulta para la tabla Tipos de Usurio
-// SELECT * FROM `tipousuario`
-$sql_tusu= "SELECT * FROM tipousuario";
-$query_tusu = mysqli_query($mysqli,$sql_tusu);
-$fila_tusu= mysqli_fetch_assoc($query_tusu);
-
-// Realizamos la consulta para la tabla Estados
-// SELECT * FROM `estados`
-$sql_estados= "SELECT * FROM estados where id_est <3";
-$query_estados = mysqli_query($mysqli,$sql_estados);
-$fila_estados= mysqli_fetch_assoc($query_estados);
-?>
-
 <form method="POST">
 
     <tr>
@@ -48,36 +34,30 @@ if(isset($_POST['btncerrar']))
 	
 ?>
 
-</div>
-
-</div>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
     <link rel="stylesheet" href="estilos.css">
-    <title>Tipo Mascota</title>
+    <title>Consulta Afiliación</title>
 </head>
     <body>
         <section class="title">
-            <h1> CONSULTAR AFILIACION Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Consulta Afiliaciones Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_consulta" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>ID Afiliacion</td>
-                    <td>Mascota Afiliacion</td>
-                    <td>Nombre Dueño</td>
-                    <td>Ident. Dueño</td>
-                    <td>Fecha Afiliacion</td>
-                    <td>Accion</td>
+                    <th>&nbsp;</th>
+                    <th>ID Afiliación</th>
+                    <th>Mascota Afiliación</th>
+                    <th>Nombre Dueño</th>
+                    <th>Documento Dueño</th>    
+                    <th>Fecha Afiliación</th>
+                    <th>Acción</th>
                 </tr>
                 <?php
                     $sql_consulta = "select * from mascota,usuario,afiliacion where afiliacion.ID_MAS = mascota.ID_MAS and mascota.ID_USU = usuario.ID_USU";
@@ -87,7 +67,7 @@ if(isset($_POST['btncerrar']))
                         $i++;
                 ?>
                 <tr>
-                    <td><?php echo $i ?></td>
+                    <th><?php echo $i ?></th>
                     <td><input name="doc" type="text" value="<?php echo $resul['ID_AFIL'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['NOM_MAS'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['PNOMBRE_USU'] ?>"></td>

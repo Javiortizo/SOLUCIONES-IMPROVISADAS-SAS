@@ -87,17 +87,17 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1>Formulario Agregar Tipo de Mascota Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Agregar Tipo Mascota Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
     <table border="1" class="center">
         <form name="frm_tmas" method="POST" autocomplete="off">
             <tr>
-                <th colspan="2">CREAR TIPO DE MASCOTA</th>
+                <th colspan="2">CREAR TIPO MASCOTA</th>
             </tr>
 
 
             <tr>
-                <th>Ident. Tipo Mascota</th>
+                <th>Id Tipo Mascota</th>
                 <th><input type="text" readonly></th>
             </tr>
             

@@ -47,20 +47,21 @@ if(isset($_POST['btncerrar']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
     <link rel="stylesheet" href="estilos.css">
-    <title>Estados</title>
+    <title>Consulta Estados</title>
 </head>
     <body>
         <section class="title">
-            <h1> CONSULTAR ESTADOS Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Consulta Estados Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_consulta" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>ID Estado</td>
-                    <td>Nombre Estado</td>
-                    <td>Accion</td>
+                    <th>&nbsp;</th>
+                    <th>Id Estado</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
                 </tr>
                 <?php
                     $sql_consulta = "SELECT * FROM estados";
@@ -70,7 +71,7 @@ if(isset($_POST['btncerrar']))
                         $i++;
                 ?>
                 <tr>
-                    <td><?php echo $i ?></td>
+                    <th><?php echo $i ?></th>
                     <td><input name="doc" type="text" value="<?php echo $resul['ID_EST'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['NOM_EST'] ?>"></td>
                     <td><a href="?id=<?php echo $resul['ID_EST'] ?>" class="boton" onclick="window.open('update-estado.php?id=<?php echo $resul['ID_EST'] ?>','','width= 600,height=500, toolbar=NO');void(null);">Update/Delete</a></td>

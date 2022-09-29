@@ -116,7 +116,7 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1> Formulario Agregar Visita Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1>Agregar Visita Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_visita" method= "POST" autocomplete = "off">
@@ -124,11 +124,11 @@ if(isset($_POST['btncerrar']))
                     <th colspan="2">CREAR VISITA</th>
                 </tr>
                 <tr>
-                    <th> ID Visita </th>                  
+                    <th> Id Visita </th>                  
                     <th> <input type= "text" readonly></th>
                 </tr>
                 <tr>
-                    <th> Fecha de Visita Mascota </th>                  
+                    <th> Fecha Visita Mascota </th>                  
                     <th><input type= "date" name= "fechaVisita" placeholder = "Ingrese Fecha de Visita de la Mascota"></th>
                 </tr>
                 <tr>
@@ -184,7 +184,7 @@ if(isset($_POST['btncerrar']))
                     </th>
                 </tr>
                 <tr>
-                    <th> ID Veterinario</th>                                   
+                    <th> Veterinario</th>                                   
                     <th>
                         <select name="idVeterinario">
                                 <option value= "">Seleccione El Veterinario</option>
@@ -200,7 +200,7 @@ if(isset($_POST['btncerrar']))
                     </th>
                 </tr>
                 <tr>
-                    <th> Tipo Estado</th>                                   
+                    <th>Estado</th>                                   
                     <th>
                         <select name="estado">
                                 <option value= "">Seleccione Estado Mascota</option>

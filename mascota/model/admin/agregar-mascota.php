@@ -114,12 +114,12 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1>Registro de Mascotas Desde <?php echo $tipo_usuario['USER_TUSU']?></h1>
+            <h1> Agregar Mascota Desde <?php echo $tipo_usuario['USER_TUSU']?></h1>
         </section>
     <table border="1" class="center">
         <form name="frm_mascota" method="POST" autocomplete="off">
             <tr>
-                <th colspan="2">REGISTRO DE MASCOTAS</th>
+                <th colspan="2">CREAR MASCOTA</th>
             </tr>
 
             <tr>

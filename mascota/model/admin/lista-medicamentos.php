@@ -42,20 +42,21 @@ if(isset($_POST['btncerrar']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
     <link rel="stylesheet" href="estilos.css">
-    <title>Medicamentos</title>
+    <title>Consulta Medicamentos</title>
 </head>
     <body>
         <section class="title">
-            <h1> CONSULTAR MEDICAMENTOS Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Consulta Medicamentos Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_consulta" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>ID Medicamento</td>
-                    <td>Medicamento</td>
-                    <td>Accion</td>
+                    <th>&nbsp;</th>
+                    <th>Id Medicamento</th>
+                    <th>Medicamento</th>
+                    <th>Acción</th>
                 </tr>
                 <?php
                     $sql_consulta = "SELECT * FROM medicamentos";
@@ -65,7 +66,7 @@ if(isset($_POST['btncerrar']))
                         $i++;
                 ?>
                 <tr>
-                    <td><?php echo $i ?></td>
+                    <th><?php echo $i ?></th>
                     <td><input name="doc" type="text" value="<?php echo $resul['ID_MED'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['NOMMED_MED'] ?>"></td>
                     <td><a href="?id=<?php echo $resul['ID_MED'] ?>" class="boton" onclick="window.open('update-medicamentos.php?id=<?php echo $resul['ID_MED'] ?>','','width= 600,height=500, toolbar=NO');void(null);">Update/Delete</a></td>

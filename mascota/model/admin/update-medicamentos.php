@@ -37,7 +37,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act.Medicamentos</title>
+    <title>Actualizar/Eliminar Medicamento</title>
 </head>
 <script> 
     function centrar() { 
@@ -50,12 +50,12 @@
     <table border="1" class="Center">
         <form name= "frm_consulta" method= "POST" autocomplete = "off">
             <tr>
-                <td>Identificador Medicamento</td>
+                <th>Id Medicamento</th>
                 <td><input readonly name="idmed" type="text" value="<?php echo $resul['ID_MED'] ?>"></td>
             </tr>
 
             <tr>
-                <td>Medicamento</td>
+                <th>Medicamento</th>
                 <td><input name="nom" type="text" value="<?php echo $resul['NOMMED_MED'] ?>"></td>
             </tr>
 

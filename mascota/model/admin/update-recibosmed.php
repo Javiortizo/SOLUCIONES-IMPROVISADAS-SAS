@@ -56,7 +56,7 @@ $rescon = mysqli_fetch_assoc($query_consulta)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Act.RecetaMed</title>
+    <title>Actualizar/Eliminar Recibo Medicamentos</title>
 </head>
 <script> 
     function centrar() { 
@@ -69,15 +69,15 @@ $rescon = mysqli_fetch_assoc($query_consulta)
     <table border="1" class="Center">
         <form name= "frm_consulta" method= "POST" autocomplete = "off">
             <tr>
-                <td>ID Receta Medica</td>
+                <th>Id Rec. Med.</th>
                 <td><input readonly name="idrmed" type="text" value="<?php echo $resul['ID_RMED'] ?>"></td>
             </tr>
             <tr>
-                <td>Visita</td>
+                <th>Visita Mascota</th>
                 <td><input readonly name="visi" type="text" value="<?php echo ($rescon['ID_VIS']." ".$rescon['FECHA_VIS']." ".$rescon['NOM_MAS']." VET: ".$rescon['PNOMBRE_USU']) ?>"></td>
             </tr>
             <tr>
-                <td>Medicamento</td>                                   
+                <th>Medicamento</th>                                   
                 <td>
                     <select name="idmed">
                         <option value= "<?php echo $resul['ID_MED'] ?>">Medicamento</option>

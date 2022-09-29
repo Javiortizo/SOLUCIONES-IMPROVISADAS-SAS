@@ -49,11 +49,11 @@ if(isset($_POST['btncerrar']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>taller</title>
+    <title>Administrador</title>
 </head>
     <body>
         <section class="title">
-            <h1>GESTION DE USUARIO  <?php echo $usua['USER_TUSU']?></h1>
+            <h1>GESTION GENERAL DESDE <?php echo $usua['USER_TUSU']?></h1>
         </section>
     
         <nav class="navegacion">
@@ -62,7 +62,7 @@ if(isset($_POST['btncerrar']))
     
                 <li class="first-item"> 
                     <a href="agregar-estado.php">
-                        <img src="img/ejecucion.png" alt="" class="imagen">
+                        <img src="img/estados.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR ESTADO</span>
                         <span class="down-item"></span>
                     </a>
@@ -70,7 +70,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="agregar-tipoUsuario.php">
-                        <img src="img/analisis.png" alt="" class="imagen">
+                        <img src="img/tipousuario.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR TIPO DE USUARIO</span>
                         <span class="down-item"></span>
                     </a>
@@ -78,7 +78,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="agregar-usuario.php">
-                        <img src="img/implementar.jpg" alt="" class="imagen">
+                        <img src="img/usuario.jpg" alt="" class="imagen">
                         <span class="text-item">AGREGAR USUARIO</span>
                         <span class="down-item"></span>
                     </a>
@@ -86,7 +86,7 @@ if(isset($_POST['btncerrar']))
 
                 <li class="first-item">
                     <a href="lista-estado.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/estados.png" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR ESTADO</span>
                         <span class="down-item"></span>
                     </a>
@@ -94,7 +94,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="lista-tipousuario.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/tipousuario.png" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR TIPO USUARIO</span>
                         <span class="down-item"></span>
                     </a>
@@ -102,7 +102,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="lista-usuario.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/usuario.jpg" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR USUARIO</span>
                         <span class="down-item"></span>
                     </a>
@@ -110,7 +110,7 @@ if(isset($_POST['btncerrar']))
 
                 <li class="first-item">
                     <a href="agregar-tipoMascota.php">
-                        <img src="img/planear.png" alt="" class="imagen">
+                        <img src="img/tipomascota.jpg" alt="" class="imagen">
                         <span class="text-item">AGREGAR TIPO MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
@@ -118,7 +118,7 @@ if(isset($_POST['btncerrar']))
                 
                 <li>
                     <a href="agregar-mascota.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/mascota.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
@@ -126,7 +126,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="agregar-afiliacion.php">
-                        <img src="img/analisis.png" alt="" class="imagen">
+                        <img src="img/afiliacion.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR AFILIACIÓN</span>
                         <span class="down-item"></span>
                     </a>
@@ -134,7 +134,7 @@ if(isset($_POST['btncerrar']))
 
                 <li class="first-item">
                     <a href="lista-tipomascota.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/tipomascota.jpg" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR TIPO MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
@@ -142,7 +142,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="lista-mascota.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/mascota.png" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR MASCOTA</span>
                         <span class="down-item"></span>
                     </a>
@@ -150,7 +150,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="lista-afiliacion.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/afiliacion.png" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR AFILIACIÓN</span>
                         <span class="down-item"></span>
                     </a>
@@ -158,7 +158,7 @@ if(isset($_POST['btncerrar']))
                 
                 <li class="first-item">
                     <a href="agregar-visita.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/visita.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR VISITA</span>
                         <span class="down-item"></span>
                     </a>
@@ -166,7 +166,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="agregar-medicamentos.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/medicamentos.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
@@ -174,7 +174,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="agregar-remedicamentos.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/recemedica.png" alt="" class="imagen">
                         <span class="text-item">AGREGAR RECIBO DE MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
@@ -182,7 +182,7 @@ if(isset($_POST['btncerrar']))
 
                 <li class="first-item">
                     <a href="lista-visita.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/visita.png" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR VISITA</span>
                         <span class="down-item"></span>
                     </a>
@@ -190,7 +190,7 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="lista-medicamentos.php">
-                        <img src="" alt="" class="imagen">
+                        <img src="img/medicamentos.png" alt="" class="imagen">
                         <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
@@ -198,8 +198,8 @@ if(isset($_POST['btncerrar']))
 
                 <li>
                     <a href="lista-recibosmed.php">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR RECIBO DE MEDICAMENTOS</span>
+                        <img src="img/recemedica.png" alt="" class="imagen">
+                        <span class="text-item">CONSULTAR/ACTUALIZAR/ELIMINAR RECIBO MEDICAMENTOS</span>
                         <span class="down-item"></span>
                     </a>
                 </li>

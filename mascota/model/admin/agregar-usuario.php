@@ -15,14 +15,15 @@ if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_usu"))
 {
     $id_usu = $_POST["tipoUsu"];
     $id_doc = $_POST["docu"];
+    $alias = $_POST['nick'];
     //SELECT * FROM `usuario` WHERE `IDENT_USU` = 9999999999 and `ID_TUSU`= 1;
     //Consulta validación usuario no registrado
-    $sql_val="SELECT * FROM usuario WHERE IDENT_USU = '$id_doc' and ID_TUSU = '$id_usu'";
+    $sql_val="SELECT * FROM usuario WHERE IDENT_USU = '$id_doc' and ID_TUSU = '$id_usu' or ALIAS_USU = '$alias'";
     $tip = mysqli_query($mysqli, $sql_val);
     $row = mysqli_fetch_assoc($tip);
 
     if ($row){
-        echo '<script>alert ("El usuario ya está registrado !!! Cambielo ");</script>';
+        echo '<script>alert ("El usuario / alias ya está registrado !!! Cambielo ");</script>';
         echo '<script>window.location = "agregar-usuario.php"</script>';
 
     }
@@ -115,7 +116,7 @@ if(isset($_POST['btncerrar']))
 </head>
     <body>
         <section class="title">
-            <h1> Formulario Agregar Usuario Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Agregar Usuario Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_usu" method= "POST" autocomplete = "off">
@@ -123,54 +124,54 @@ if(isset($_POST['btncerrar']))
                     <th colspan="2">CREAR USUARIO</th>
                 </tr>                           
                 <tr>
-                    <th> Documento Identificación de Usuario </th>                  
-                    <th> <input type= "number" name= "docu" placeholder = "Ingresar Documento Usuario"></th>
+                    <th> Doc Ident Usuario </th>                  
+                    <td> <input type= "number" name= "docu" placeholder = "Ingresar Documento Usuario"></td>
                 </tr> 
                 <tr>
                     <th> Primer Nombre Usuario </th>                  
-                    <th><input type= "text" name= "pnombre" placeholder = "Ingresar Primer Nombre Usuario"></th>
+                    <td><input type= "text" name= "pnombre" placeholder = "Ingresar Primer Nombre Usuario"></td>
                 </tr>
                 <tr>
                     <th> Segundo Nombre Usuario</th>                  
-                    <th><input type= "text" name= "snombre" placeholder = "Ingresar Segundo Nombre Usuario"></th>
+                    <td><input type= "text" name= "snombre" placeholder = "Ingresar Segundo Nombre Usuario"></td>
                 </tr>
                 <tr>
                     <th> Primer Apellido Usuario</th>                  
-                    <th><input type= "text" name= "pape" placeholder = "Ingresar Primer Apellido Usuario"></th>
+                    <td><input type= "text" name= "pape" placeholder = "Ingresar Primer Apellido Usuario"></td>
                 </tr>
                 <tr>
                     <th> Segundo Apellido Usuario</th>                  
-                    <th><input type= "text" name= "sape" placeholder = "Ingresar Segundo Apellido Usuario"></th>
+                    <td><input type= "text" name= "sape" placeholder = "Ingresar Segundo Apellido Usuario"></td>
                 </tr>
                 <tr>
                     <th> Dirección Usuario</th>                  
-                    <th><input type= "text" name= "direccion" placeholder = "Ingresar Dirección Usuario"></th>
+                    <td><input type= "text" name= "direccion" placeholder = "Ingresar Dirección Usuario"></td>
                 </tr>
                 <tr>
                     <th> Teléfono Usuario</th>                  
-                    <th><input type= "number" name= "telefono" placeholder = "Ingresar Teléfono Usuario"></th>
+                    <td><input type= "number" name= "telefono" placeholder = "Ingresar Teléfono Usuario"></td>
                 </tr>
                 <tr>
                     <th> Correo Electrónico Usuario</th>                  
-                    <th><input type= "email" name= "email" placeholder = "Ingresar Correo Electrónico Usuario"></th>
+                    <td><input type= "email" name= "email" placeholder = "Ingresar Correo Electrónico Usuario"></td>
                 </tr>
                 <tr>
                     <th> Tarjeta Profesional</th>                  
-                    <th><input type= "number" name= "tprof" placeholder = "Ingresar Número Tarjeta Profesional Usuario"></th>
+                    <td><input type= "number" name= "tprof" placeholder = "Ingresar Número Tarjeta Profesional Usuario"></td>
                 </tr>
                 <tr>
                     <th> Contraseña Usuario</th>                  
-                    <th><input type= "password" name= "passwd" placeholder = "Ingresar Contraseña Usuario"></th>
+                    <td><input type= "password" name= "passwd" placeholder = "Ingresar Contraseña Usuario"></td>
                 </tr>
                 <tr>                    
                     <th> Nickname Usuario</th>                  
-                    <th><input type= "text" name= "nick" placeholder = "Ingresar Nickname Usuario"></th>
+                    <td><input type= "text" name= "nick" placeholder = "Ingresar Nickname Usuario"></td>
                 </tr>
                 <tr>
                     <th>Tipo Usuario</th>
-                    <th>
+                    <td>
                         <select name="tipoUsu">
-                            <option value= "">Seleccione Tipo de Usuario</option>
+                            <option value= "">Seleccione Tipo Usuario</option>
                             <?php
                                  // Código php ciclo
                                 do{
@@ -180,10 +181,10 @@ if(isset($_POST['btncerrar']))
                             <?php } while($fila_tusu=mysqli_fetch_assoc($query_tusu));
                             ?>
                         </select>
-                    </th>
+                    </td>
                 </tr>
                 <tr>
-                    <th> Tipo Estado</th>                                   
+                    <th> Estado</th>                                   
                     <th>
                         <select name="estado">
                                 <option value= "">Seleccione Estado Usuario</option>

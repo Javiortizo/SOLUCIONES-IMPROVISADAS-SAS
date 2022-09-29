@@ -36,11 +36,11 @@ if ((isset($_POST["guardar"])) && ($_POST["guardar"] == "frm_recimed"))
 $sql_vis= "SELECT visita.ID_VIS, mascota.NOM_MAS, usuario.PNOMBRE_USU, usuario.IDENT_USU, visita.FECHA_VIS, visita.ID_USU
 from mascota
 INNER JOIN usuario ON mascota.ID_USU = usuario.ID_USU 
-INNER JOIN visita ON mascota.ID_MAS = visita.ID_MAS
+INNER JOIN visita ON mascota.ID_MAS = visita.ID_MAS 
 ORDER BY visita.ID_VIS;";
 $query_vis = mysqli_query($mysqli,$sql_vis);
 $fila_vis= mysqli_fetch_assoc($query_vis);
-//var_dump($fila_vis);
+// var_dump($sql_vis);
 
 //Consulta a tabla de medicamentos
 //SELECT * FROM `medicamentos` WHERE 1;
@@ -91,11 +91,11 @@ if(isset($_POST['btncerrar']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
-    <title>Recibo de Medicamentos</title>
+    <title>Recibo Medicamentos</title>
 </head>
     <body>
         <section class="title">
-            <h1> Formulario Agregar Recibo Medicamentos <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Agregar Recibo Medicamentos Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_recimed" method= "POST" autocomplete = "off">
@@ -103,8 +103,8 @@ if(isset($_POST['btncerrar']))
                     <th colspan="2">AGREGAR RECIBO MEDICAMENTOS</th>
                 </tr>
                 <tr>
-                    <th>Identificador Visita</th>                                   
-                    <th>
+                    <th>Visita</th>                                   
+                    <td>
                         <select name="idVisita">
                                 <option value= "">Seleccione La Visita</option>
                                 <?php
@@ -116,12 +116,12 @@ if(isset($_POST['btncerrar']))
                                 <?php } while($fila_vis=mysqli_fetch_assoc($query_vis));
                                 ?>
                         </select>
-                    </th>
+                    </td>
                 </tr>
 
                 <tr>
-                    <th>Identificador Medicamento</th>                                   
-                    <th>
+                    <th>Medicamento</th>                                   
+                    <td>
                         <select name="idMedicamento">
                                 <option value= "">Seleccione El Medicamento</option>
                                 <?php
@@ -133,7 +133,7 @@ if(isset($_POST['btncerrar']))
                                 <?php } while($fila_medi=mysqli_fetch_assoc($query_medi));
                                 ?>
                         </select>
-                    </th>
+                    </td>
                 </tr>                
 
                 <tr>

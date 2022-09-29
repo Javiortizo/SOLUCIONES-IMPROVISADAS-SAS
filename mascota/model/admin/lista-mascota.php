@@ -61,24 +61,25 @@ if(isset($_POST['btncerrar']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
     <link rel="stylesheet" href="estilos.css">
-    <title>Agregar Mascota</title>
+    <title>Consulta Mascota</title>
 </head>
     <body>
         <section class="title">
-            <h1> CONSULTAR MASCOTA Desde <?php echo $usua['USER_TUSU']?></h1>
+            <h1> Consulta Mascotas Desde <?php echo $usua['USER_TUSU']?></h1>
         </section>
         <table border="1" class="Center">
             <form name= "frm_consulta" method= "POST" autocomplete = "off">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>Nombre</td>
-                    <td>Color</td>
-                    <td>Raza</td>
-                    <td>Afiliacion</td>
-                    <td>Dueño</td>
-                    <td>Tipo Mascota</td>
-                    <td>Accion</td>
+                    <th>&nbsp;</th>
+                    <th>Nombre Mascota</th>
+                    <th>Color Mascota</th>
+                    <th>Raza Mascota</th>
+                    <th>Afiliación Mascota</th>
+                    <th>Dueño Mascota</th>
+                    <th>Tipo Mascota</th>
+                    <th>Acción</th>
                 </tr>
                 <?php
                     $sql_consulta = "SELECT * FROM mascota,tipomascota,usuario WHERE mascota.ID_USU = usuario.ID_USU AND mascota.ID_TMAS = tipomascota.ID_TMAS";
@@ -88,7 +89,7 @@ if(isset($_POST['btncerrar']))
                         $i++;
                 ?>
                 <tr>
-                    <td><?php echo $i ?></td>
+                    <th><?php echo $i ?></th>
                     <td><input name="doc" type="text" value="<?php echo $resul['NOM_MAS'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['COLOR_MAS'] ?>"></td>
                     <td><input name="doc" type="text" value="<?php echo $resul['RAZA_MAS'] ?>"></td>
